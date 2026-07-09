@@ -11,7 +11,7 @@
 
     </div>
     Comments:
-    {% if post.comments.all %}
+    {% if post.comments.all.count %}
       <div class="comment-block">
           {% for comment in post.comments.all %}
             <div class="comment">{{ comment.user }}: {{ comment.content }}</div>
