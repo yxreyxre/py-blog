@@ -13,7 +13,7 @@ from blog.models import Post
 class PostListView(ListView):
     model = Post
     queryset = Post.objects.all().order_by("-created_time")
-    context_object_name = "posts"
+    context_object_name = "post_list"
     template_name = "index.html"
     paginate_by = 5
 

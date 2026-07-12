@@ -16,6 +16,12 @@ class Post(models.Model):
     content = models.TextField()
     created_time = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["-created_time"]
+
+    def __str__(self):
+        return self.title
+
 
 class Commentary(models.Model):
     user = models.ForeignKey(
