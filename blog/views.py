@@ -7,8 +7,6 @@ from django.views.generic import ListView, DetailView
 from blog.forms import CommentForm
 from blog.models import Post
 
-# Create your views here.
-
 
 class PostListView(ListView):
     model = Post
